@@ -7,5 +7,5 @@ Socialyze will be an information visualization webapp where users can create cus
 Users will be able to choose from a selection of websites and datasets to create visualizations in order to better study or portray social media trends and topics.
 The site will offer an interactive graphical interface over which the users can select datasets and types of visualizations (bar graphs, diagrams, network graphs).
 Modifications to the visualization's settings will be immediately visible to the user.
-If possible (and relevant), the visualized datasets will show live updates
+If possible (and relevant), the visualized datasets will show live updates.
 
