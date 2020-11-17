@@ -1,0 +1,14 @@
+<!-- base template for socialyze user management pages -->
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/users.css' %}" />
+</head>
+
+<div class="header_banner">
+    <h1>Socialyze App</h1>
+</div>
+
+<div class="content">
+{% block content %}
+{% endblock %}
+</div>

@@ -1,0 +1,9 @@
+<!-- user logged out -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Logged out successfully</h2>
+
+    <a href="{% url 'dashboard' %}">Return to dashboard</a>
+{% endblock %}
