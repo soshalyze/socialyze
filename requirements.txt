@@ -1,1 +1,1 @@
-pip gunicorn
+gunicorn==20.0.4
