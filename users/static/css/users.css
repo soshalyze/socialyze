@@ -2,6 +2,14 @@ body {
     font-family: sans-serif;
 }
 
+label, input {
+    display: block;
+}
+
+span.helptext {
+    display: none;
+}
+
 div.header_banner {
     background-color: #c51e3a;
     color: #ffffff;
@@ -11,5 +19,6 @@ div.header_banner {
 }
 
 div.content {
-    margin: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
 }
