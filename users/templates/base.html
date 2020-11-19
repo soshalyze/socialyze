@@ -1,14 +1,41 @@
 <!-- base template for socialyze user management pages -->
 {% load static %}
+<!-- meta data -->
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Socialyze is a Social-Media Visualization platform for Everyone">
+    <meta name="keywords" content="Visualization, Social Media Visualization, Statistics">
+    <meta name="copyright" content="Socialyze">
+    <title>Socialyze</title>
+    <!-- css for special use -->
     <link rel="stylesheet" href="{% static 'css/users.css' %}" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-TxKWSXbsweFt0o2WqfkfJRRNVaPdzXJ/YLqgStggBVRREXkwU7OKz+xXtqOU4u8+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen,projection">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<div class="header_banner">
-    <h1>Socialyze App</h1>
-</div>
-
-<div class="content">
-{% block content %}
-{% endblock %}
-</div>
+<body>
+    <div class="container">
+        <div class="row col s8 offset-s2">
+            <nav>
+                <div class="nav-wrapper" style="padding-left: 25px">
+                    <a href="#" class="brand-logo">Socialyze App</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="z-depth-2 grey lighten-3 row" style="padding: 32px 25px 25px 32px; border: 1px solid #EEE;">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>

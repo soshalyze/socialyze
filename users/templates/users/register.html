@@ -3,12 +3,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Register</h2>
+    <h4>Register</h4>
 
     <form method="post">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="Register">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Register
+            <i class="material-icons right">send</i>
+        </button>
     </form>
 
     <a href="{% url 'login' %}">Back to login</a>

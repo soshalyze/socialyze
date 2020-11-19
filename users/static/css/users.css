@@ -10,15 +10,3 @@ span.helptext {
     display: none;
 }
 
-div.header_banner {
-    background-color: #c51e3a;
-    color: #ffffff;
-    padding: 2em;
-    margin: 2em;
-    border-radius: 10px;
-}
-
-div.content {
-    margin-left: 10em;
-    margin-right: 10em;
-}
