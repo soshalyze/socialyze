@@ -1,0 +1,20 @@
+<head>
+    <title>Choose a visualization</title>
+    <style>
+    label, input {
+        display: block;
+    }
+    span.helptext {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+<h1>Choose a visualization</h1>
+
+<form action="/app/visualize/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+</body>
