@@ -51,3 +51,8 @@ def choose_viz(request):
             if form.cleaned_data['visualization_type'] == 'karma_by_sub':
                 graph = app.visualizations.create_comment_bar_graph(form.cleaned_data['dataset'])
                 return render(request, 'showviz.html', {'plot_div': graph})
+
+@login_required
+def sandbox(request):
+    return render(request, 'sandbox.html')
+

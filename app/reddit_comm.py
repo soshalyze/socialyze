@@ -1,3 +1,4 @@
+import os
 import praw
 from app.models import *
 
@@ -5,11 +6,11 @@ from app.models import *
 class RedditCommunication:
     def __init__(self, app_user, reddit_user):
         self.app_user = app_user
-        self.reddit = praw.Reddit(client_id='CLIENT_ID',
-                                  client_secret='CLIENT_SECRET',
-                                  username='USERNAME',
-                                  password='PASSWORD',
-                                  user_agent='python:commentreader:v0.1')
+        self.reddit = praw.Reddit(client_id=os.getenv('CLIENT_ID'),
+                                  client_secret=os.getenv('CLIENT_SECRET'),
+                                  username=os.getenv('REDDIT_USERNAME'),
+                                  password=os.getenv('REDDIT_PASSWORD'),
+                                  user_agent='python:socialyze:v0.1 (by /u/socialyze_project')
         self.redditor = self.reddit.redditor(reddit_user)
         self.db_user = RedditUser(app_user=self.app_user, username=reddit_user)
         self.db_user.save()
