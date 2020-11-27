@@ -3,5 +3,4 @@ venv
 */__pycache__/*
 */*/__pycache__/*
 */migrations
-node_modules/jquery/
-
+node_modules/
