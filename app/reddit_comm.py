@@ -10,7 +10,7 @@ class RedditCommunication:
                                   client_secret=os.getenv('CLIENT_SECRET'),
                                   username=os.getenv('REDDIT_USERNAME'),
                                   password=os.getenv('REDDIT_PASSWORD'),
-                                  user_agent='python:socialyze:v0.1 (by /u/socialyze_project')
+                                  user_agent='python:socialyze:v0.1 (by /u/socialyze_project)')
         self.redditor = self.reddit.redditor(reddit_user)
         self.db_user = RedditUser(app_user=self.app_user, username=reddit_user)
         self.db_user.save()
