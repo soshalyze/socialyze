@@ -21,21 +21,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="container">
-        <div class="row col s8 offset-s2">
-            <nav>
-                <div class="nav-wrapper" style="padding-left: 25px">
-                    <a href="#" class="brand-logo">Socialyze App</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{% url 'register' %}">Register</a></li>
-                        <li><a href="{% url 'login' %}">Login</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="z-depth-2 grey lighten-3 row" style="padding: 32px 25px 25px 32px; border: 1px solid #EEE;">
-            {% block content %}
-            {% endblock %}
-        </div>
+<div class="container">
+    <div class="row col s8 offset-s2">
+        <nav>
+            <div class="nav-wrapper" style="padding-left: 25px">
+                <a href="#" class="brand-logo">Socialyze App</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
+    <div class="z-depth-2 grey lighten-3 row" style="padding: 32px 25px 25px 32px; border: 1px solid #EEE;">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
