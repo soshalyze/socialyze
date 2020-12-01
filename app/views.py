@@ -49,8 +49,11 @@ def choose_viz(request):
         form = CreateVisualizationForm(request.POST)
         if form.is_valid():
             if form.cleaned_data['visualization_type'] == 'karma_by_sub':
+                if not RedditUser.objects.app_user_has_reddit_user(app_user=request.user, reddit_user=form.cleaned_data['dataset']):
+                    return render(request, 'errorviz.html')
                 graph = app.visualizations.create_comment_bar_graph(form.cleaned_data['dataset'])
                 return render(request, 'showviz.html', {'plot_div': graph})
+
 
 @login_required
 def sandbox(request):
