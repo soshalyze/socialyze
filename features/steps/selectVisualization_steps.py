@@ -36,5 +36,4 @@ def check_page(context, page):
     if page == 'visualization':
         context.test.assertTemplateUsed(context.response, 'showviz.html')
     elif page == 'error':
-        print(context.response.content.decode())
         context.test.assertTemplateUsed(context.response, 'errorviz.html')
