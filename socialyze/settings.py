@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,11 @@ STATIC_URL = '/static/'
 
 # start screen after login
 LOGIN_REDIRECT_URL = 'dashboard'
+
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
+}
 
 # email server to send password recovery emails from
 EMAIL_HOST = 'localhost'

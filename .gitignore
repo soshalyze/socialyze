@@ -1,6 +1,8 @@
 venv
 .idea
-*/__pycache__/*
-*/*/__pycache__/*
-*/migrations
+app/__pycache__/
+socialyze/__pycache__
+users/__pycache__
+app/migrations/
+users/migrations/
 node_modules/
