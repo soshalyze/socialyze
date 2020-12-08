@@ -1,6 +1,6 @@
 Feature: Retrieve Data From Server
 
-As an example user
+As a user
 I want to fetch data from a social media server
 
   Scenario: get a comment dataset
