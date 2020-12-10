@@ -6,3 +6,4 @@ users/__pycache__
 app/migrations/
 users/migrations/
 node_modules/
+.env
